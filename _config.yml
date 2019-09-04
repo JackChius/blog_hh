@@ -75,6 +75,7 @@ pagination_dir: page
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 theme: next
+plugins: hexo-generate-feed
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
@@ -82,3 +83,15 @@ deploy:
   type: git
   repo: git@git.coding.net:dunye/pixbar_site.git
   branch: master
+# 侧边栏社交配置
+# social:
+#   GitHub: https://github.com/your-user-name
+#   Twitter: https://twitter.com/your-user-name
+#   Weibo: http://weibo.com/your-user-name
+#   douban: http://douban.com/people/your-user-name
+#   zhihu: http://www.zhihu.com/people/your-user-name
+
+feed:
+  type: atom
+  path: /atom.xml
+  limit: 20

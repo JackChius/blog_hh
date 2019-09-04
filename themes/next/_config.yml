@@ -40,7 +40,8 @@ keywords: "Hexo, NexT"
 # Set rss to false to disable feed link.
 # Leave rss as empty to use site's feed link.
 # Set rss to specific value if you have burned your feed already.
-rss:
+rss: /atom.xml
+# avatar:
 
 footer:
   # Specify the date when the site was setup.
@@ -60,7 +61,7 @@ footer:
     # Theme & scheme info link (Theme - NexT.scheme).
     enable: true
     # Version info of NexT after scheme info (vX.X.X).
-    version: true
+    version: false
   # -------------------------------------------------------------
   # Any custom text can be defined here.
   #custom_text: Hosted by <a target="_blank" href="https://pages.github.com">GitHub Pages</a>
@@ -126,7 +127,9 @@ scheme: Gemini
 # Key is the link label showing to end users.
 # Value before `||` delimeter is the target permalink.
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, globe icon will be loaded.
-#social:
+social:
+  GitHub: https://github.com/yourname || github   #网站名：网址 ||图标名
+  简书: http://www.jianshu.com || heartbeat
   #GitHub: https://github.com/yourname || github
   #E-Mail: mailto:yourname@gmail.com || envelope
   #Google: https://plus.google.com/yourname || google
@@ -140,8 +143,11 @@ scheme: Gemini
 
 social_icons:
   enable: true
-  icons_only: false
-  transition: false
+  # icons_only: false
+  # transition: false
+  # GitHub: github
+  # Twitter: twitter
+  # Weibo: weibo
 
 # Blog rolls
 links_icon: link
@@ -154,7 +160,7 @@ links_layout: block
 # Sidebar Avatar
 # in theme directory(source/images): /images/avatar.gif
 # in site  directory(source/uploads): /uploads/avatar.gif
-#avatar: /images/avatar.gif
+avatar: https://avatars1.githubusercontent.com/u/32255?v=3&s=460
 
 # Table Of Contents in the Sidebar
 toc:
@@ -510,6 +516,10 @@ facebook_comments_plugin:
   num_of_posts: 10    # min posts num is 1
   width:        100%  # default width is 550px
   scheme:       light # default scheme is light (light or dark)
+
+# rss plugin
+# plugin:
+#   - hexo-generator-feed
 
 # VKontakte API Support.
 # To get your AppID visit https://vk.com/editapp?act=create
