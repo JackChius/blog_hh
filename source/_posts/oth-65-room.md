@@ -1,9 +1,8 @@
 ---
-title: 肥来了
-date: 2019-09-02 21:04:23
+title: oth 65 room
+date: 2019-09-04 16:25:59
 categories: 日常生活
 tags: [笔记]
-sage: true
 ---
 More info: [Writing](https://hexo.io/docs/writing.html)
 

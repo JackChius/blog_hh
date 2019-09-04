@@ -403,10 +403,16 @@
       {% if not is_index and (post.prev or post.next) %}
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
-            {% if post.next %}
+            {% if post.next && post.next.sage %}
+              <a href="{{ url_for(post.next.next.path) }}" rel="next" title="{{ post.next.next.title }}">
+                <i class="fa fa-chevron-left"></i> {{ post.next.sage }}ooooo
+              </a>
+            {% elseif post.next %}
               <a href="{{ url_for(post.next.path) }}" rel="next" title="{{ post.next.title }}">
                 <i class="fa fa-chevron-left"></i> {{ post.next.title }}
               </a>
+            {% else %}
+            <span> 到底了 </span>
             {% endif %}
           </div>
 
