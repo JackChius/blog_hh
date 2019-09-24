@@ -81,8 +81,10 @@ plugins: hexo-generate-feed
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: git@git.coding.net:dunye/pixbar_site.git
-  branch: master
+  repo: 
+      gitee: git@gitee.com:dunye/blog_hh.git,master
+      coding: git@git.coding.net:dunye/pixbar_site.git,master  
+  # branch: master
 # 侧边栏社交配置
 # social:
 #   GitHub: https://github.com/your-user-name
