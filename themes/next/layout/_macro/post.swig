@@ -405,7 +405,7 @@
           <div class="post-nav-next post-nav-item">
             {% if post.next && post.next.sage %}
               <a href="{{ url_for(post.next.next.path) }}" rel="next" title="{{ post.next.next.title }}">
-                <i class="fa fa-chevron-left"></i> {{ post.next.sage }}ooooo
+                <i class="fa fa-chevron-left"></i> {{ post.next.next.title }} .
               </a>
             {% elseif post.next %}
               <a href="{{ url_for(post.next.path) }}" rel="next" title="{{ post.next.title }}">
@@ -419,10 +419,16 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            {% if post.prev %}
+            {% if post.prev && post.prev.sage %}
+              <a href="{{ url_for(post.prev.prev.path) }}" rel="next" title="{{ post.prev.prev.title }}">
+                <i class="fa fa-chevron-right"></i> {{ post.prev.prev.title }} .
+              </a>
+            {% elseif post.prev %}
               <a href="{{ url_for(post.prev.path) }}" rel="prev" title="{{ post.prev.title }}">
                 {{ post.prev.title }} <i class="fa fa-chevron-right"></i>
               </a>
+            {% else %}
+              <span> 到顶了 </span>
             {% endif %}
           </div>
         </div>
