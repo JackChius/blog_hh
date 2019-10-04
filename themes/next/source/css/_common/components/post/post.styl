@@ -25,6 +25,36 @@
 .post-body .figure .caption {
   @extend .post-body .image-caption;
 }
+// 文章图文并排定制
+.post-body .head_img a.fancybox {
+  border-bottom: none;
+  flex: 1 2 auto;
+   +mobile-small() {
+     flex: 1 1 40%;
+   }
+  }
+.post-body .head_img span.head_img_desp {
+    flex:1 1 100%;
+    position: relative;
+    top: 20px;
+    font-size:18px;
+    +mobile-small() {
+        top: -8px;
+        font-size: 13px;        
+   }
+   +mobile(){
+      top: -8px;
+      font-size: 13px;        
+   }
+   +desktop-init(){
+      top: 0px;
+      font-size: 15px;      
+   }
+   +desktop(){
+      top: 5px;
+      font-size: 18px;        
+   }
+  }
 
 .post-sticky-flag {
   display: inline-block;

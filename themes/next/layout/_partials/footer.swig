@@ -34,8 +34,8 @@
 {% if theme.footer.theme.enable %}
   <div class="theme-info">{#
   #}{{ __('footer.theme') }} &mdash; {#
-  #}<a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">{#
-    #}NexT.{{ theme.scheme }}{#
+  #}<a class="theme-link" target="_blank" href="http://nodejs.cn/">{#
+    #}Node.js Engine {#
   #}</a>{% if theme.footer.theme.version %} v{{ theme.version }}{% endif %}{#
 #}</div>
 {% endif %}
@@ -43,5 +43,9 @@
 {% if theme.footer.custom_text %}
   <div class="footer-custom">{#
   #}{{ theme.footer.custom_text }}{#
-#}</div>
+#}</div> 
+<span style="display:none;" >
+  NexT.{{ theme.scheme }}
+</span>
 {% endif %}
+
