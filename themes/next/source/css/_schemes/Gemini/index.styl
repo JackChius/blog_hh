@@ -224,3 +224,107 @@ $use-seo = hexo-config('seo');
     margin: $content-mobile-padding 0 0;
   }
 }
+
+// 头图壁纸区域
+.site-brand-big {
+    position: relative;
+    height: 400px;
+    width: 100%;
+    color: rgba(255,255,255,0.8);
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    // background-image: url(https://www.z4a.net/images/2020/01/26/15800361381.png); 
+    background-image: url(https://www.z4a.net/images/2020/01/26/imagec14e66d1df145b98.png);     
+    font-family: 'Sigmar One';
+    +tablet-mobile() {
+      top: -9px;
+      position: absolute;
+    }
+  }
+.site-brand-title .animate:hover, .guide:hover {
+    opacity: .6;
+}
+.site_toto {
+    text-align: center;
+    width: 70%;
+    margin: auto;
+    top: -90px;
+    padding: 40px 0;
+    padding-bottom: 40px;
+    font-size: 16px;
+    opacity: .98;
+    background: rgba(230,244,249,.7);
+    z-index: 1;
+    animation: b 1s ease-out;
+    position: relative;
+    border-radius: 5px;
+    margin-bottom: -70px;
+      +tablet-mobile() {
+          display: none;
+        }
+  }
+.site_master_avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+  }
+
+@keyframes tada {
+    0% {
+        -webkit-transform: scale(1);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+        transform: scale(1)
+    }
+
+    10%,20% {
+        -webkit-transform: scale(.9) rotate(-3deg);
+        -webkit-transform: scale(.9) rotate(-3deg);
+        -moz-transform: scale(.9) rotate(-3deg);
+        -ms-transform: scale(.9) rotate(-3deg);
+        -o-transform: scale(.9) rotate(-3deg);
+        transform: scale(.9) rotate(-3deg)
+    }
+
+    30%,50%,70%,90% {
+        -webkit-transform: scale(1.1) rotate(3deg);
+        -webkit-transform: scale(1.1) rotate(3deg);
+        -moz-transform: scale(1.1) rotate(3deg);
+        -ms-transform: scale(1.1) rotate(3deg);
+        -o-transform: scale(1.1) rotate(3deg);
+        transform: scale(1.1) rotate(3deg)
+    }
+
+    40%,60%,80% {
+        -webkit-transform: scale(1.1) rotate(-3deg);
+        -webkit-transform: scale(1.1) rotate(-3deg);
+        -moz-transform: scale(1.1) rotate(-3deg);
+        -ms-transform: scale(1.1) rotate(-3deg);
+        -o-transform: scale(1.1) rotate(-3deg);
+        transform: scale(1.1) rotate(-3deg)
+    }
+
+    100% {
+        -webkit-transform: scale(1) rotate(0);
+        -webkit-transform: scale(1) rotate(0);
+        -moz-transform: scale(1) rotate(0);
+        -ms-transform: scale(1) rotate(0);
+        -o-transform: scale(1) rotate(0);
+        transform: scale(1) rotate(0)
+    }
+}
+
+.site_master_avatar:hover {
+   animation-name: tada;
+   animation-duration: .9s;
+   animation-timing-function:ease-in;
+   animation-iteration-count: 1;
+}
+.site_master_description {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 20px 0 0;
+  }

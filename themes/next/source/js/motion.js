@@ -71,8 +71,8 @@ NexT.motion.middleWares = {
 
     title && sequence.push({
       e: title,
-      p: {opacity: 1, top: 0},
-      o: {duration: 200}
+      p: {opacity: 1, top: 54},
+      o: {duration: 890}
     });
 
     subtitle && sequence.push({

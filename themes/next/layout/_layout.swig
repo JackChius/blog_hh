@@ -12,13 +12,51 @@
 <body itemscope itemtype="http://schema.org/WebPage">
   <div class="container{%- if theme.motion.enable %} use-motion{%- endif %}">
     <div class="headband"></div>
-
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner">{% include '_partials/header/index.swig' %}</div>
     </header>
-
     {{ partial('_partials/widgets.swig', {}, {cache: theme.cache.enable}) }}
-
+     <!-- 头图壁纸部分 START -->
+     <div class="site-brand-big" >
+      <div class="site-brand-meta">
+        <div class="custom-logo-site-title">
+          <div class="brander">
+            <span class="logo-line-before"><i></i>
+            </span> 
+            <div class="site-brand-title">
+              <div id="animate" class="animate" style="font-size: 100px; height: 100px; line-height: 100px;">
+                <span style="left: 256.609px; transform: translate(0px, 0px); opacity: 1;">H</span><span style="left: 349.609px; transform: translate(0px, 0px); opacity: 1;">I</span>
+                <span style="left: 390.719px; transform: translate(0px, 0px); opacity: 1;">,</span>
+                <span style="left: 431.625px; transform: translate(0px, 0px); opacity: 1;"> </span>
+                <span style="left: 457.438px; transform: translate(0px, 0px); opacity: 1;">S</span>
+                <span style="left: 543.25px; transform: translate(0px, 0px); opacity: 1;">I</span>
+                <span style="left: 591.25px; transform: translate(0px, 0px); opacity: 1;">L</span>
+                <span style="left: 673.156px; transform: translate(0px, 0px); opacity: 1;">I</span>
+                <span style="left: 745.766px; transform: translate(0px, 0px); opacity: 1;">C</span>
+                <span style="left: 821.266px; transform: translate(0px, 0px); opacity: 1;">O</span>
+                <span style="left: 895.609px; transform: translate(0px, 0px); opacity: 1;">N</span>
+              </div>
+                <div id="guide" class="guide" style="font-size: 100px; height: 100px; line-height: 100px;">
+                <span>C</span><span>I</span><span>T</span><span>O</span><span>Y</span>
+                <span>C</span><span>I</span><span>T</span><span>Y</span><span>Y</span>
+              </div>
+            </div>
+            <span class="logo-line-after"><i></i></span>
+            </div>
+          </div>
+            <p class="site-brand-subtitle"></p>
+        </div>
+            <div class="site-nav-toggle-brand">
+            <button><span class="btn-bar"></span> 
+                <span class="btn-bar"></span> <span class="btn-bar"></span>
+            </button>
+      </div>
+     </div> 
+     <div class="site_toto">
+        <img class="site_master_avatar" itemprop="image" src="https://cdn.jsdelivr.net/gh/DIYgod/diygod.me@gh-pages/images/DIYgod.jpg" alt="silcity">
+        <h2 class="site_master_description" ><span style="color: #00a7e0!important;">Coding是热爱，</span><span style="color: #ff3f1a!important;">Code到世界充满爱！</span></h2>
+     </div>    
+    <!-- 头图壁纸部分 END -->
     <main class="main">
       <div class="main-inner">
         <div class="content-wrap">

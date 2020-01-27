@@ -130,7 +130,7 @@ NexT.utils = {
   },
 
   registerScrollPercent: function() {
-    var THRESHOLD = 50;
+    var THRESHOLD = 250;
     var backToTop = document.querySelector('.back-to-top');
     var readingProgressBar = document.querySelector('.reading-progress-bar');
     // For init back to top in sidebar if page was scrolled after page refresh.
