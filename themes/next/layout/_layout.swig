@@ -16,6 +16,11 @@
       <div class="header-inner">{% include '_partials/header/index.swig' %}</div>
     </header>
     {{ partial('_partials/widgets.swig', {}, {cache: theme.cache.enable}) }}
+     <!-- 下拉萌化BACKTOTOP START -->
+       <div class="back-to-top-coo"  >
+         <!-- <i class="fa fa-arrow-up"></i> -->
+       </div>      
+     <!-- 下拉萌化BACKTOTOP END -->      
      <!-- 头图壁纸部分 START -->
      <div class="site-brand-big" >
       <div class="site-brand-meta">
@@ -96,7 +101,7 @@
 
   <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
   <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
-  <script type="text/javascript" src="/js/fireworks.js"></script>
+  
   <script type="text/javascript" src="/js/loveClick.js"></script>
 
 </body>

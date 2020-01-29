@@ -3,21 +3,48 @@
 }
 
 .site-meta {
-  background: $orange;
-  color: black;
-  padding: 20px 0;
-  height: 80px;
-      background-size: cover;
-    background-position: center bottom;
-    background-repeat: no-repeat;
-  background-image: url(https://www.z4a.net/images/2020/01/26/imagec9ab3303999037fd.md.png); 
-
+    // background: $orange;
+    color: black;
+    padding: 20px 0;
+    height: 80px;   
+    div>a {
+      z-index: 10;
+      transition: all .6s ease-in-out; 
+    }
+    &:hover {
+        div>a {
+          color: orange;
+        }      
+    }
+    &:hover:after {
+        opacity: 0.9;
+        background-size: 100% 110%;
+      }
 
   +tablet-mobile() {
     box-shadow: 0 0 16px rgba(0, 0, 0, .5);
-    opacity: 0.5;
+    opacity: 0.6;
   }
 }
+
+.site-meta::after {
+  content: "";
+  background-size: 110% 122%;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-image: url(https://www.z4a.net/images/2020/01/26/imagec9ab3303999037fd.md.png); 
+  opacity: 1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: 1;
+  transition: all .7s ease-in-out; 
+      &:hover {
+         opacity: 0.7;
+        }
+  } 
 
 .brand {
   background: none;

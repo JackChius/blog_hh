@@ -6,7 +6,7 @@ NexT.boot.registerEvents = function() {
 
   NexT.utils.registerScrollPercent();
   NexT.utils.registerCanIUseTag();
-
+  // console.log('kankaN 主题名字B')
   // Mobile top menu bar.
   document.querySelector('.site-nav-toggle .toggle').addEventListener('click', () => {
     event.currentTarget.classList.toggle('toggle-close');
@@ -22,8 +22,15 @@ NexT.boot.registerEvents = function() {
       });
     } else {
       siteNav.classList.toggle('site-nav-on');
-    }
+    }    
+
   });
+    // 添加自定义主题名
+    var tryCoverLink = document.querySelectorAll('.theme-link')
+    var tryCoverLinkText = tryCoverLink[1].innerHTML
+    tryCoverLink[1].innerHTML = 'Fuzzy'
+    tryCoverLink[1].href = "https://www.baidu.com"
+    console.log('kankaN 主题名字', tryCoverLinkText)
 
   var TAB_ANIMATE_DURATION = 200;
   document.querySelectorAll('.sidebar-nav li').forEach((element, index) => {

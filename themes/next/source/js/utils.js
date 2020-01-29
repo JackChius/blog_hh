@@ -132,6 +132,8 @@ NexT.utils = {
   registerScrollPercent: function() {
     var THRESHOLD = 250;
     var backToTop = document.querySelector('.back-to-top');
+    // 下拉萌化回到顶部条
+    var backToTopCoo = document.querySelector('.back-to-top-coo');
     var readingProgressBar = document.querySelector('.reading-progress-bar');
     // For init back to top in sidebar if page was scrolled after page refresh.
     window.addEventListener('scroll', () => {
@@ -143,6 +145,8 @@ NexT.utils = {
         if (backToTop) {
           backToTop.classList.toggle('back-to-top-on', window.scrollY > THRESHOLD);
           backToTop.querySelector('span').innerText = Math.round(scrollPercent) + '%';
+          // 下拉萌化回到顶部条 qiehuan
+          backToTopCoo.classList.toggle('back-to-top-coon', window.scrollY > THRESHOLD);
         }
         if (readingProgressBar) {
           readingProgressBar.style.width = scrollPercent.toFixed(2) + '%';
@@ -158,6 +162,16 @@ NexT.utils = {
         scrollTop: 0
       });
     });
+    // 下拉萌化回到顶部条 监听
+    backToTopCoo && backToTopCoo.addEventListener('click', () => {
+      window.anime({
+        targets  : document.scrollingElement,
+        duration : 500,
+        easing   : 'linear',
+        scrollTop: 0
+      });
+    });
+
   },
 
   /**

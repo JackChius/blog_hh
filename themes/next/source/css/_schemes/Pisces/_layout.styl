@@ -36,6 +36,7 @@
     width: auto;
     top: 71px;
     z-index: 10;
+    margin-bottom: 123px;
   }
 }
 
@@ -102,3 +103,25 @@ if (hexo-config('sidebar.position') == 'right') {
     width: auto;
   }
 }
+
+// 下拉萌化回到顶部条
+.back-to-top-coo {
+  cursor: pointer;
+    position: fixed;
+    right: 20px;
+    top: -900px;
+    z-index: 2;
+    width: 70px;
+    height: 900px;
+    background: url(../images/scroll.png);
+    // background: black;
+    transition: all .5s ease-in-out; 
+    opacity: 1;
+      +mobile() {
+         display: none;
+        }
+  }
+
+  .back-to-top-coon {
+    top: -10px;
+    }
