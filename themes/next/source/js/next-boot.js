@@ -29,7 +29,7 @@ NexT.boot.registerEvents = function() {
     var tryCoverLink = document.querySelectorAll('.theme-link')
     var tryCoverLinkText = tryCoverLink[1].innerHTML
     tryCoverLink[1].innerHTML = 'Fuzzy'
-    tryCoverLink[1].href = "https://www.baidu.com"
+    tryCoverLink[1].href = "https://gitee.com/dunye/hexo_theme_fuzzy"
     console.log('kankaN 主题名字', tryCoverLinkText)
 
   var TAB_ANIMATE_DURATION = 200;

@@ -58,6 +58,8 @@
   <script src="{{ pace_js_uri }}"></script>
 {%- endif %}
 
+
+
 {# Export some Hexo Configurations to Front-End #}
 <script id="hexo-configurations">
   var NexT = window.NexT || {};
@@ -88,3 +90,15 @@
     motion: {{ theme.motion | json }}
   };
 </script>
+
+{% if theme.daovoice %}
+  <script>
+      setTimeout( function(){
+          (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/9b56e344.js","daovoice")
+          daovoice('init', {
+            app_id: "{{theme.daovoice_app_id}}"
+          });
+          daovoice('update');
+      }, 6100 )    
+  </script>
+{% endif %}

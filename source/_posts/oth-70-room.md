@@ -1,6 +1,6 @@
 ---
 title: oth 70 room
-date: 2019-09-04 16:23:27
+date: 2016-09-04 16:23:27
 categories: 日常生活
 tags: [笔记]
 ---
