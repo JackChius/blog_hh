@@ -6,6 +6,7 @@ NexT.boot.registerEvents = function() {
 
   NexT.utils.registerScrollPercent();
   NexT.utils.registerCanIUseTag();
+  NexT.utils.registerElasticList();
   // console.log('kankaN 主题名字B')
   // Mobile top menu bar.
   document.querySelector('.site-nav-toggle .toggle').addEventListener('click', () => {

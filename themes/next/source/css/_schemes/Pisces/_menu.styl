@@ -39,7 +39,11 @@
 .menu .menu-item {
   display: block;
   margin: 0;
-
+  +mobile() {
+    display: inline-block !important;
+    width: 23% !important;
+    // margin: 0 10px;
+  }
   a, span.exturl {
     padding: 5px 20px;
     position: relative;

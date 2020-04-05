@@ -29,7 +29,7 @@
 
 .site-meta::after {
   content: "";
-  background-size: 110% 122%;
+  background-size: cover;
   background-position: center bottom;
   background-repeat: no-repeat;
   background-image: url(https://www.z4a.net/images/2020/01/26/imagec9ab3303999037fd.md.png); 
@@ -44,6 +44,9 @@
       &:hover {
          opacity: 0.7;
         }
+  +mobile() {
+       background-position: center 55%;
+  }
   } 
 
 .brand {

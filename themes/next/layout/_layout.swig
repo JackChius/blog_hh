@@ -59,8 +59,9 @@
      </div> 
      <div class="site_toto">
         <img class="site_master_avatar" itemprop="image" src="https://www.z4a.net/images/2020/02/04/image6d422d4673a8633f.png" alt="silcity">
-        <h2 class="site_master_description" ><span style="color: #00a7e0!important;">Coding是热爱，</span><span style="color: #ff3f1a!important;">Code到世界充满爱！</span></h2>
-     </div>    
+        <h2 class="site_master_description" ><span style="color: #00a7e0!important;">探索有点酷，</span><span style="color: #00a7e0!important;">记录有点意思</span></h2>
+     </div>            
+
     <!-- 头图壁纸部分 END -->
     <main class="main">
       <div class="main-inner">

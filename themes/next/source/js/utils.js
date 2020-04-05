@@ -205,6 +205,11 @@ NexT.utils = {
 
     window.dispatchEvent(new Event('tabs:register'));
   },
+  // 伸缩列表/可伸缩监听
+  registerElasticList: function(){
+    console.log('伸缩列表。。。。。')
+    // alert('sssssssssss')
+  } ,
 
   registerCanIUseTag: function() {
     // Get responsive height passed from iframe.
