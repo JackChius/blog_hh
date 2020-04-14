@@ -11,10 +11,12 @@
 
 <body itemscope itemtype="http://schema.org/WebPage">
   <div class="container{%- if theme.motion.enable %} use-motion{%- endif %}">
-    <div class="headband"></div>
+    <div class="headband">1111111111</div>
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner">{% include '_partials/header/index.swig' %}</div>
+      11111111111
     </header>
+    <div> 11111111111 </div>
     {{ partial('_partials/widgets.swig', {}, {cache: theme.cache.enable}) }}
      <!-- 下拉萌化BACKTOTOP START -->
        <div class="back-to-top-coo"  >
