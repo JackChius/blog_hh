@@ -22,14 +22,19 @@
        </div>      
      <!-- 下拉萌化BACKTOTOP END -->      
      <!-- 头图壁纸部分 START -->
-     <div class="site-brand-big" style="background-image:url('http://schema.org/WPHeader-{{ page.title }}')"  >
+      {% set my_banner = theme.banner_pic %}    
+      {% if page.banner.length > 1 %}
+       {% set my_banner = page.banner %}        
+      {% endif %}      
+
+     <div class="site-brand-big" style="background-image:url( {{my_banner}} )" >
       <div class="site-brand-meta">
         <div class="custom-logo-site-title">
           <div class="brander">
             <span class="logo-line-before"><i></i>
             </span> 
             <div class="site-brand-title">
-              <div id="animate" class="animate" style="font-size: 100px; height: 100px; line-height: 100px;">
+              <div id="animate" class="animate" >
                 <span style="left: 256.609px; transform: translate(0px, 0px); opacity: 1;">H</span><span style="left: 349.609px; transform: translate(0px, 0px); opacity: 1;">I</span>
                 <span style="left: 390.719px; transform: translate(0px, 0px); opacity: 1;">,</span>
                 <span style="left: 431.625px; transform: translate(0px, 0px); opacity: 1;"> </span>
@@ -41,7 +46,7 @@
                 <span style="left: 821.266px; transform: translate(0px, 0px); opacity: 1;">O</span>
                 <span style="left: 895.609px; transform: translate(0px, 0px); opacity: 1;">N</span>
               </div>
-                <div id="guide" class="guide" style="font-size: 100px; height: 100px; line-height: 100px;">
+                <div id="guide" class="guide" >
                 <span>C</span><span>I</span><span>T</span><span>O</span><span>Y</span>
                 <span>C</span><span>I</span><span>T</span><span>Y</span><span>Y</span>
               </div>

@@ -218,6 +218,9 @@ NexT.utils = {
           element.style.padding = '0px'
           element.style.marginBottom = '-45px'
         } )
+        document.querySelectorAll('.content-wrap').forEach( ele => {
+          ele.style.marginTop = '18px'
+        } )
       } else {
         document.querySelectorAll('.post-body').forEach( element => {
           element.style.display = 'block'
@@ -225,6 +228,9 @@ NexT.utils = {
         document.querySelectorAll('.post-block').forEach( element => {
           element.style.padding = '40px'
           element.style.marginBottom = '0px'
+        } )
+        document.querySelectorAll('.content-wrap').forEach( ele => {
+          ele.style.marginTop = '0px'
         } )
       }
   

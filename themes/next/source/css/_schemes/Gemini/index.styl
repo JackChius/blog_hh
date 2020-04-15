@@ -242,11 +242,20 @@ $use-seo = hexo-config('seo');
     +tablet-mobile() {
       top: -9px;
       position: absolute;
+      height: 180px;
     }
   }
 .site-brand-title .animate:hover, .guide:hover {
     opacity: .6;
 }
+.site-brand-title .animate, .guide {
+    font-size: 100px; height: 100px; line-height: 100px;
+    +tablet-mobile() {
+      font-size: 40px;
+      height: 40px;
+      line-height: 60px;
+    }
+  }
 .site_toto {
     text-align: center;
     width: 70%;

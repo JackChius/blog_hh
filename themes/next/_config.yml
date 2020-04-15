@@ -1033,3 +1033,6 @@ images: images
 # Online contact
 daovoice: true
 daovoice_app_id: 9b56e344
+
+# Banner Pic
+banner_pic: 'http://imgg.cookcloud.club/ipicimagec14e66d1df145b98.png'
