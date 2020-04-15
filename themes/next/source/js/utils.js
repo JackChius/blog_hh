@@ -207,7 +207,29 @@ NexT.utils = {
   },
   // 伸缩列表/可伸缩监听
   registerElasticList: function(){
-    console.log('伸缩列表。。。。。')
+    let onListSwitch = document.querySelector('#onoffswitch')
+    onListSwitch.addEventListener('click', event => {
+      if( window.location.pathname!= '/' ){ return false }
+      if ( onListSwitch.checked) {        
+        document.querySelectorAll('.post-body').forEach( element => {
+          element.style.display = 'none'
+        } )
+        document.querySelectorAll('.post-block').forEach( element => {
+          element.style.padding = '0px'
+          element.style.marginBottom = '-45px'
+        } )
+      } else {
+        document.querySelectorAll('.post-body').forEach( element => {
+          element.style.display = 'block'
+        } )
+        document.querySelectorAll('.post-block').forEach( element => {
+          element.style.padding = '40px'
+          element.style.marginBottom = '0px'
+        } )
+      }
+  
+    })
+    // console.log( 'switch',onListSwitch )
     // alert('sssssssssss')
   } ,
 
