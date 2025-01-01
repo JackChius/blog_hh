@@ -230,19 +230,21 @@ $use-seo = hexo-config('seo');
 // 头图壁纸区域
 .site-brand-big {
     position: relative;
-    height: 400px;
+    height: 389px;
     width: 100%;
     color: rgba(255,255,255,0.8);
     background-size: cover;
-    background-position: center top;
+    background-position: -1px -190px;
     background-repeat: no-repeat;
     // background-image: url(https://www.z4a.net/images/2020/01/26/15800361381.png); 
-    background-image: url(http://imgg.cookcloud.club/ipicimagec14e66d1df145b98.png);     
+    // background-image: url(https://imgg.cookcloud.club/ipicimagec14e66d1df145b98.png);  
+     background-image: url(https://imgs.699pic.com/images/501/007/542.jpg!seo.v1);         
     font-family: 'Sigmar One';
     +tablet-mobile() {
       top: -9px;
       position: absolute;
       height: 180px;
+      background-repeat: initial;
     }
   }
 .site-brand-title .animate:hover, .guide:hover {
@@ -265,15 +267,21 @@ $use-seo = hexo-config('seo');
     padding-bottom: 40px;
     font-size: 16px;
     opacity: .98;
-    background: rgba(230,244,249,.7);
+    // background: rgba(230,244,249,.7);
+    background: linear-gradient(to right,rgba(176,196,222,0.1),rgba(176,196,222,0.6));
     z-index: 1;
     animation: b 1s ease-out;
     position: relative;
     border-radius: 5px;
     margin-bottom: -70px;
+    transition: all 0.4s ease-in 0s;
       +tablet-mobile() {
           display: none;
         }
+  }
+.site_toto:hover{
+  background: rgba(230,244,249, .4);
+  top: -92px;
   }
 .site_master_avatar {
     width: 100px;

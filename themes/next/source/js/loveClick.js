@@ -27,9 +27,14 @@ jQuery(document).ready(function($) {
 			    $i.remove();
 			});
     });
+    $('.dplayer-video').bind('contextmenu',function() { return false; });
+    $('#dplayer0').bind('contextmenu',function() { return false; });
+    $('.dplayer-controller').bind('contextmenu',function() { return false; });
+    $('.dplayer-full-in-icon').remove()
     setTimeout('delay()', 2000);
 });
 
 function delay() {
     $(".buryit").removeAttr("onclick");
+    $('.dplayer-full-in-icon').remove()
 }

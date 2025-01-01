@@ -3,18 +3,20 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 硅 城 集 结 地
+title: Dunye的开发笔记
 subtitle:
 description:
 keywords:
-author: chluer
+author: dunye(chluer)
 language: zh-CN
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
-root: /
+# url: https://blog.cookcloud.club
+# root: /
+url:  https://dunye.gitee.io/blog_hh
+root: /blog_hh/
 # permalink: :year/:month/:day/:title/
 permalink: :category/:title/
 permalink_defaults:
@@ -51,7 +53,7 @@ highlight:
 # order_by: Posts order. (Order by date descending by default)
 index_generator:
   path: ''
-  per_page: 10
+  per_page: 12
   order_by: -date
   
 # Category & Tag
@@ -84,7 +86,10 @@ deploy:
   repo: 
       gitee: git@gitee.com:dunye/blog_hh.git,master
       coding: git@git.coding.net:dunye/pixbar_site.git,master  
-  # branch: master
+  # repo:  git@110.43.241.192:/home/git/hexoBlog.git
+      # gitee: git@gitee.com:dunye/blog_hh.git,master
+      # coding: git@git.coding.net:dunye/pixbar_site.git,master  
+  branch: master
 # 侧边栏社交配置
 # social:
 #   GitHub: https://github.com/your-user-name
@@ -97,3 +102,27 @@ feed:
   type: atom
   path: /atom.xml
   limit: 20
+
+# Markdown config
+markdown_it_plus:
+  render:
+    html: true
+    xhtmlOut: false
+    breaks: true
+    linkify: true
+    typographer: true
+    quotes: '“”‘’'
+  plugins:
+    - markdown-it-abbr
+    - markdown-it-footnote
+    - markdown-it-ins
+    - markdown-it-sub
+    - markdown-it-sup
+    - markdown-it-emoji  # add emoji
+  anchors:
+    level: 2
+    collisionSuffix: 'v'
+    permalink: true
+    permalinkClass: header-anchor
+    permalinkSide: 'left'
+    permalinkSymbol: ¶

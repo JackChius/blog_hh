@@ -1,10 +1,60 @@
 /* global NexT, CONFIG */
+// import Cookies from './cookie.js'
+// let Cookies = require('./cookie.js')
 
 HTMLElement.prototype.wrap = function(wrapper) {
   this.parentNode.insertBefore(wrapper, this);
   this.parentNode.removeChild(this);
   wrapper.appendChild(this);
 };
+
+  function setCookie(name,value)
+    {
+      var Days = 30;
+      var exp = new Date();
+      exp.setTime(exp.getTime() + Days*24*60*60*1000);
+      document.cookie = name + "="+ escape (value) + ";expires=" + exp.toGMTString();
+    }
+
+  function getCookie(name)
+    {
+      var arr,reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)");
+      if(arr=document.cookie.match(reg))
+      return unescape(arr[2]);
+      else
+      return null;
+    }
+  function miniPostList(){
+    document.querySelectorAll('.post-body').forEach( element => {
+      element.style.display = 'none'
+    } )
+    document.querySelectorAll('.post-block').forEach( element => {
+      element.style.padding = '0px'
+      element.style.marginBottom = '-45px'
+    } )
+    document.querySelectorAll('.content-wrap').forEach( ele => {
+      ele.style.marginTop = '18px'
+    } )
+    document.querySelectorAll('.post-title').forEach( ele => {
+      ele.style.borderBottom = '2px solid lightblue'
+      // ele.style.marginBottom = '1px solid lightblue'
+    } )
+  }
+  function maxPostList(){
+    document.querySelectorAll('.post-body').forEach( element => {
+      element.style.display = 'block'
+    } )
+    document.querySelectorAll('.post-block').forEach( element => {
+      element.style.padding = '40px'
+      element.style.marginBottom = '0px'
+    } )
+    document.querySelectorAll('.content-wrap').forEach( ele => {
+      ele.style.marginTop = '8px'
+    } )
+    document.querySelectorAll('.post-title').forEach( ele => {
+      ele.style.borderBottom = 'none'
+    } )
+  }
 
 NexT.utils = {
 
@@ -206,34 +256,31 @@ NexT.utils = {
     window.dispatchEvent(new Event('tabs:register'));
   },
   // 伸缩列表/可伸缩监听
-  registerElasticList: function(){
+  registerElasticList: function(){   
     let onListSwitch = document.querySelector('#onoffswitch')
+    if( window.location.pathname== '/' || window.location.pathname.includes('page')  ){ 
+        let spandStatus = getCookie("isSpandList")
+        if (spandStatus=='no'){
+          window.onload = function(){
+            setTimeout(()=>{
+            onListSwitch.click()
+          }, 3000)   
+          }       
+        }
+     }
+
+    console.log( 'is pathname include page ?', !window.location.pathname.includes('page') )
     onListSwitch.addEventListener('click', event => {
-      if( window.location.pathname!= '/' ){ return false }
-      if ( onListSwitch.checked) {        
-        document.querySelectorAll('.post-body').forEach( element => {
-          element.style.display = 'none'
-        } )
-        document.querySelectorAll('.post-block').forEach( element => {
-          element.style.padding = '0px'
-          element.style.marginBottom = '-45px'
-        } )
-        document.querySelectorAll('.content-wrap').forEach( ele => {
-          ele.style.marginTop = '18px'
-        } )
-      } else {
-        document.querySelectorAll('.post-body').forEach( element => {
-          element.style.display = 'block'
-        } )
-        document.querySelectorAll('.post-block').forEach( element => {
-          element.style.padding = '40px'
-          element.style.marginBottom = '0px'
-        } )
-        document.querySelectorAll('.content-wrap').forEach( ele => {
-          ele.style.marginTop = '0px'
-        } )
-      }
-  
+      if( window.location.pathname== '/' || window.location.pathname.includes('page')  ){ 
+        if ( onListSwitch.checked) {        
+          miniPostList()
+          setCookie("isSpandList", "no")          
+        } else {
+          maxPostList()         
+          setCookie("isSpandList", "yes")
+        }
+    
+       } 
     })
     // console.log( 'switch',onListSwitch )
     // alert('sssssssssss')
@@ -377,7 +424,7 @@ NexT.utils = {
     document.querySelector('.post-toc-wrap').style.maxHeight = sidebarWrapperHeight;
   },
 
-  updateSidebarPosition: function() {
+  updateSidebarPosition: function() {   
     var sidebarNav = document.querySelector('.sidebar-nav');
     var hasTOC = document.querySelector('.post-toc');
     if (hasTOC) {

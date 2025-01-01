@@ -35,7 +35,7 @@
             </span> 
             <div class="site-brand-title">
               <div id="animate" class="animate" >
-                <span style="left: 256.609px; transform: translate(0px, 0px); opacity: 1;">H</span><span style="left: 349.609px; transform: translate(0px, 0px); opacity: 1;">I</span>
+             <!--   <span style="left: 256.609px; transform: translate(0px, 0px); opacity: 1;">H</span><span style="left: 349.609px; transform: translate(0px, 0px); opacity: 1;">I</span>
                 <span style="left: 390.719px; transform: translate(0px, 0px); opacity: 1;">,</span>
                 <span style="left: 431.625px; transform: translate(0px, 0px); opacity: 1;"> </span>
                 <span style="left: 457.438px; transform: translate(0px, 0px); opacity: 1;">S</span>
@@ -44,12 +44,10 @@
                 <span style="left: 673.156px; transform: translate(0px, 0px); opacity: 1;">I</span>
                 <span style="left: 745.766px; transform: translate(0px, 0px); opacity: 1;">C</span>
                 <span style="left: 821.266px; transform: translate(0px, 0px); opacity: 1;">O</span>
-                <span style="left: 895.609px; transform: translate(0px, 0px); opacity: 1;">N</span>
+                <span style="left: 895.609px; transform: translate(0px, 0px); opacity: 1;">N</span> -->
+                <span>dunye的开发笔记</span>
               </div>
-                <div id="guide" class="guide" >
-                <span>C</span><span>I</span><span>T</span><span>O</span><span>Y</span>
-                <span>C</span><span>I</span><span>T</span><span>Y</span><span>Y</span>
-              </div>
+              
             </div>
             <span class="logo-line-after"><i></i></span>
             </div>
@@ -57,14 +55,12 @@
             <p class="site-brand-subtitle"></p>
         </div>
             <div class="site-nav-toggle-brand">
-            <button><span class="btn-bar"></span> 
-                <span class="btn-bar"></span> <span class="btn-bar"></span>
-            </button>
+           
       </div>
      </div> 
      <div class="site_toto">
-        <img class="site_master_avatar" itemprop="image" src="https://www.z4a.net/images/2020/02/04/image6d422d4673a8633f.png" alt="silcity">
-        <h2 class="site_master_description" ><span style="color: #00a7e0!important;">探索有点酷，</span><span style="color: #00a7e0!important;">记录有点意思</span></h2>
+        <img class="site_master_avatar" itemprop="image" src="https://imgs.699pic.com/images/501/007/542.jpg!seo.v1" alt="dunye的开发笔记">
+        <h2 class="site_master_description" ><span style="color: #00a7e0!important;">探索&nbsp; 记录 &nbsp;</span><span style="color: #00a7e0!important;">&nbsp; 分享 &nbsp; 思考</span></h2>
      </div>            
 
     <!-- 头图壁纸部分 END -->
@@ -106,7 +102,7 @@
   {%- endif %}
 
   <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
-  <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+ <!-- <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script>  -->
   
   <script type="text/javascript" src="/js/loveClick.js"></script>
 

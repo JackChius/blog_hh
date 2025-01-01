@@ -167,7 +167,7 @@ sidebar:
 # Sidebar Avatar
 avatar:
   # Replace the default image and set the url here. #/images/avatar.gif
-  url: https://avatars1.githubusercontent.com/u/32255?v=3&s=460
+  url: https://imgs.699pic.com/images/501/007/542.jpg!seo.v1
   # If true, the avatar will be dispalyed in circle.
   rounded: false
   # If true, the avatar will be rotated with the cursor.
@@ -181,9 +181,9 @@ site_state: true
 # Key is the link label showing to end users.
 # Value before `||` delimiter is the target permalink, value after `||` delimiter is the name of Font Awesome icon.
 social:
-  GitHub: https://github.com/yourname || github
+  GitHub: https://gitee.com/dunye || github
   #E-Mail: mailto:yourname@gmail.com || envelope
-  Weibo: https://weibo.com/yourname || weibo
+  ProPlat: https://cookcloud.club || google
   #Google: https://plus.google.com/yourname || google
   #Twitter: https://twitter.com/yourname || twitter
   #FB Page: https://www.facebook.com/yourname || facebook
@@ -1035,4 +1035,4 @@ daovoice: true
 daovoice_app_id: 9b56e344
 
 # Banner Pic
-banner_pic: 'http://imgg.cookcloud.club/ipicimagec14e66d1df145b98.png'
+banner_pic: 'https://7463-tcb-3hkf8tmwpkhh8ns-3c1ufa774006-1323121995.tcb.qcloud.la/font_image/bbb111.jpg'

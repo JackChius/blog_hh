@@ -16,30 +16,6 @@
 
     {%- if post.header !== false %}
       <header class="post-header">
-        <{%- if theme.seo %}h2{% else %}h1{%- endif %} class="post-title{%- if post.direction and post.direction.toLowerCase() === 'rtl' %} rtl{%- endif %}" itemprop="name headline">
-          {# Link posts #}
-          {%- if post.link %}
-            {%- if post.sticky > 0 %}
-              <span class="post-sticky-flag" title="{{ __('post.sticky') }}">
-                <i class="fa fa-thumb-tack"></i>
-              </span>
-            {%- endif %}
-            {%- set postTitleIcon = '<i class="fa fa-external-link"></i>' %}
-            {%- set postText = post.title or post.link %}
-            {{ next_url(post.link, postText + postTitleIcon, {class: 'post-title-link post-title-link-external', itemprop: 'url'}) }}
-          {% elif is_index %}
-            {%- if post.sticky > 0 %}
-              <span class="post-sticky-flag" title="{{ __('post.sticky') }}">
-                <i class="fa fa-thumb-tack"></i>
-              </span>
-            {%- endif %}
-            {{ next_url(post.path, post.title or __('post.untitled'), {class: 'post-title-link', itemprop: 'url'}) }}
-          {%- else %}
-            {{- post.title }}
-            {{- post_edit(post.source) }}
-          {%- endif %}
-        </{%- if theme.seo %}h2{% else %}h1{%- endif %}>
-
         <div class="post-meta">
 
           {%- set date_diff = date(post.date) != date(post.updated) %}
@@ -160,7 +136,32 @@
             <div class="post-description">{{ post.description }}</div>
           {%- endif %}
 
-        </div>
+        </div><span style="color:lightgray;">.</span>
+        <{%- if theme.seo %}h2{% else %}h1{%- endif %} class="post-title{%- if post.direction and post.direction.toLowerCase() === 'rtl' %} rtl{%- endif %}" itemprop="name headline">
+          {# Link posts #}
+          {%- if post.link %}
+            {%- if post.sticky > 0 %}
+              <span class="post-sticky-flag" title="{{ __('post.sticky') }}">
+                <i class="fa fa-thumb-tack"></i>
+              </span>
+            {%- endif %}
+            {%- set postTitleIcon = '<i class="fa fa-external-link"></i>' %}
+            {%- set postText = post.title or post.link %}
+            {{ next_url(post.link, postText + postTitleIcon, {class: 'post-title-link post-title-link-external', itemprop: 'url'}) }}
+          {% elif is_index %}
+            {%- if post.sticky > 0 %}
+              <span class="post-sticky-flag" title="{{ __('post.sticky') }}">
+                <i class="fa fa-thumb-tack"></i>
+              </span>
+            {%- endif %}
+            {{ next_url(post.path, post.title or __('post.untitled'), {class: 'post-title-link', itemprop: 'url'}) }}
+          {%- else %}
+            {{- post.title }}
+            {{- post_edit(post.source) }}
+          {%- endif %}
+        </{%- if theme.seo %}h2{% else %}h1{%- endif %}>
+
+      
       </header>
     {%- endif %}
 
